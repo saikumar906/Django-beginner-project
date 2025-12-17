@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" >
+    {% csrf_token %}
+    age:<input type="number" name="txtage" value="{{ age }}" required> 
+    <input type="submit" value="validateage"><br>
+    <input type="text" placeholder="see the result" value="{{ eligible }}">
+    <a href="{% url 'leapyear' %}">leapyear</a>
+</form>
+</body>
+</html>
